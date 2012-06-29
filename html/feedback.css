@@ -1,0 +1,86 @@
+/* ----------------------------------------------------------------------
+   Sticky SlideIn/SlideOut Content Panel v1.0
+   ----------------------------------------------------------------------
+   Created by VERYA.ca (http://www.verya.ca) for CodeCanyon.net
+   ----------------------------------------------------------------------
+   ChangeLog
+   ----------------------------------------------------------------------
+   v1.0 - 03/08/2012
+		Initial release;
+   ---------------------------------------------------------------------- */
+
+body {
+font:11px Verdana;
+}
+
+/* ----------------------------------------------------------------------
+   Color Schemes
+   ----------------------------------------------------------------------
+   Here is how the color shades are used (using green as an example)
+
+   Panel background		#91a657 (lighter)
+   Panel border			#82954d (normal)
+   Panel border hover	#768542 (darker)
+
+   * Copy line 71 to 82 to create a new color scheme
+	 Do not forget to rename the class name after your color
+   ---------------------------------------------------------------------- */
+
+/* --------------------------------------------------
+   General Panel Styles
+   -------------------------------------------------- */
+
+.panel3 {
+background-image:url("img/feedback_30x400.png");
+background-position:bottom left;
+background-repeat:no-repeat;
+color:#ffffff;
+height:400px;
+padding:4px 8px;
+position:fixed;
+top:200px;
+width:200px;
+z-index:99;
+box-shadow:-2px 2px 5px #cccccc;
+}
+
+/* --------------------------------------------------
+   Positioning: Slide from right
+   -------------------------------------------------- */
+
+.right3 {
+border-left-style:solid;
+border-width:6px;
+right:-180px;
+text-align:right;
+transition:right .2s ease-out;
+-moz-transition:right .2s ease-out;
+-webkit-transition:right .2s ease-out;
+-o-transition:right .2s ease-out;
+}
+
+.right3:hover {
+cursor:pointer;
+right:0;
+transition:right .4s ease-out;
+-moz-transition:right .4s ease-out;
+-webkit-transition:right .4s ease-out;
+-o-transition:right .4s ease-out;
+}
+
+/* --------------------------------------------------
+   Color Schemes
+   -------------------------------------------------- */
+
+/* --------------------------------------------------
+   Blue
+   -------------------------------------------------- */
+
+.blue {
+background-color:#288ad3;
+border-color:#107dce;
+}
+
+.blue:hover {
+border-color:#0871b5;
+}

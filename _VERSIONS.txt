@@ -1,0 +1,36 @@
+v0.1 - First release of the app. Ready for public beta.
+
+feedback backend - admin/feedback.php - Need developer backends: Login, List of projects --> comment, actions (Veto, Completed)
+
+PayPal subscriptions / Membership Manager w/ new Admin Skin
+
+Need deployable XML licensing feature from DB - If active PayPal subscription: TABLE: users: username (db) == xmlUser && membership_id > 0 == ACTIVE
+
+Setup Google Apps for eduStudios.com and on mobile & tablet
+
+Need Piwik or Google analytics 
+
+Setup Bug Form
+
+
+
+
+
+
+v0.2 - HTML/CSS/JS Version
+
+**Pull out all config, database and php files outside the root
+**Update to prevent SQL injection: Prepared Statements (http://net.tutsplus.com/tutorials/other/top-20-mysql-best-practices/)
+**Optimized SELECT * DB Queries
+
+
+
+index.html - HTML/JS Version (with manual pages)… need SWF to send variables from Captivate to JavaScript projName, projDesc, devName, slideNum from Captivate into HTML form
+
+Embeddable Widget - http://alexmarandon.com/articles/web_widget_jquery/
+
+
+
+
+
+v0.3 - IF ELSE Statements for Flash Courses and potentially others like Articulate Version
