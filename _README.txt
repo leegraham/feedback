@@ -42,3 +42,22 @@ GitHub
 http://git-scm.com/videos
 http://tutorialfeed.net/development/geo-targeting-with-php
 EBOOK: PayPal APIs Up and Running
+
+
+
+
+
+
+
+
+
+
+TO DO (eduStudios):
+ 1. Google Apps
+ 2. Pivotal Tracker
+ 3. Facebook Page
+ 4. Twitter
+ 5. Google+ Page
+ 6. IRC
+ 7. CRM: Base or Salesforce or Campfire
+ 8. Beanstalk
