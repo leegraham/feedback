@@ -26,17 +26,17 @@
 <form action="createProject.php" method="post">
   <p>
     <label for="projName">PROJECT NAME:</label>
-    <input type="text" name="projName">
+    <input type="text" name="projName" required>
   </p>
   <p>
     <label for="devName">DEVELOPER NAME:</label>
-    <input type="text" name="devName">
+    <input type="text" name="devName" required placeholder="Lee Graham">
   </p>
   <p>
     <input type="hidden" name="status" readonly value="1">
   </p>
   <p>
-    <input type="submit" value="Save" data-icon="check" data-theme="b">
+    <input type="submit" value="Save" data-icon="check" data-theme="b" onClick="PageRefresh">
   </p>
 </form>
 <?php

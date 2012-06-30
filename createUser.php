@@ -26,15 +26,15 @@
 <form action="createUser.php" method="post">
   <p>
     <label for="name">NAME:</label>
-    <input type="text" name="name">
+    <input type="text" name="name" required placeholder="Lee Graham">
   </p>
   <p>
     <label for="email">EMAIL:</label>
-    <input type="text" name="email">
+    <input type="email" name="email" required placeholder="me@me.com">
   </p>
   <p>
     <label for="password">PASSWORD:</label>
-    <input type="password" name="password">
+    <input type="password" name="password" required placeholder="Minimum 8 characters (1 uppercase letter, 1 lowercase letter, 1 number, 1 special character)">
   </p>
   <p>
     <input type="hidden" name="newsletter" value="1">
@@ -52,10 +52,10 @@
 		?>">
   </p>
   <p>
-    <input type="hidden" name="status" readonly value="1">
+    <input type="hidden" name="status" readonly value="1" required>
   </p>
   <p>
-    <input type="submit" value="Save" data-icon="check" data-theme="b">
+    <input type="submit" value="Save" data-icon="check" data-theme="b" onClick="PageRefresh">
   </p>
 </form>
 <?php

@@ -39,39 +39,39 @@
 <form action="updateComment.php" method="post">
 	  <p>
     <label for="projName">PROJECT NAME:</label>
-    <input type="text" name="projName" value="<?php echo $projName; ?>" readonly="readonly">
+    <input type="text" name="projName" value="<?php echo $projName; ?>" readonly>
   </p>
   <p>
     <label for="devjName">DEVELOPER NAME:</label>
-    <input type="text" name="devName" value="<?php echo $devName; ?>">
+    <input type="text" name="devName" value="<?php echo $devName; ?>" required>
   </p>
   <p>
     <label for="slideNum">SLIDE NUMBER:</label>
-    <input type="text" name="slideNum" value="<?php echo $slideNum; ?>">
+    <input type="number" name="slideNum" value="<?php echo $slideNum; ?>" required>
   </p>
   <p>
     <label for="revName">REVIEWER NAME:</label>
-    <input type="text" name="revName" value="<?php echo $revName; ?>">
+    <input type="text" name="revName" value="<?php echo $revName; ?>" required>
   </p>
   <p>
     <label for="revEmail">REVIEWER EMAIL:</label>
-    <input type="text" name="revEmail" value="<?php echo $revEmail; ?>">
+    <input type="email" name="revEmail" value="<?php echo $revEmail; ?>" required>
   </p>
   <p>
     <label for="revComment">COMMENT:</label>
-    <input type="text" name="revComment" value="<?php echo $revComment; ?>" size="150">
+    <input type="text" name="revComment" value="<?php echo $revComment; ?>" size="150" required>
   </p>
   <p>
     <label for="status">STATUS:</label>
-    <input type="text" name="status" value="<?php echo $status; ?>">
+    <input type="number" name="status" value="<?php echo $status; ?>" required>
   </p>
   <p>
     <label for="timestamp">TIMESTAMP:</label>
-    <input type="text" name="timestamp" value="<?php echo $timestamp; ?>">
+    <input type="text" name="timestamp" value="<?php echo $timestamp; ?>" readonly>
   </p>
   <p>
 	<p>
-		<input type="submit" value="Save" data-icon="check" data-theme="b">
+		<input type="submit" value="Save" data-icon="check" data-theme="b" onClick="PageRefresh" required>
 	</p>
 </form>
 <?php } ?>

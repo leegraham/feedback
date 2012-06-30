@@ -41,11 +41,11 @@
 	</p>
 	<p>
 		<label for="name">EMAIL:</label>
-		<input type="text" name="email" value="<?php echo $email; ?>">
+		<input type="email" name="email" value="<?php echo $email; ?>" required>
 	</p>
 	<p>
 		<label for="password">PASSWORD:</label>
-		<input type="password" name="password" value="<?php echo $password; ?>">
+		<input type="password" name="password" value="<?php echo $password; ?>" required>
 	</p>
 	<p>
 		<label for="newsletter">NEWSLETTER:</label>
@@ -53,7 +53,7 @@
 	</p>
 	<p>
 		<label for="ip">IP:</label>
-		<input type="text" name="ip" readonly="readonly" value="<?php
+		<input type="text" name="ip" readonly value="<?php
 		//GET USER IP ADDRESS - http://tutorialfeed.net/development/geo-targeting-with-php
 		function get_ip(){
 			if( !empty( $_SERVER['HTTP_CLIENT_IP'] ) ){
@@ -66,10 +66,10 @@
 	</p>
 	<p>
 		<label for="status">STATUS:</label>
-		<input type="text" name="status" value="<?php echo $status; ?>">
+		<input type="number" name="status" value="<?php echo $status; ?>" required>
 	</p>
 	<p>
-		<input type="submit" value="Save" data-icon="check" data-theme="b">
+		<input type="submit" value="Save" data-icon="check" data-theme="b" onClick="PageRefresh">
 	</p>
 </form>
 <?php } ?>

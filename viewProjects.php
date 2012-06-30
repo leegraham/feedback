@@ -13,43 +13,40 @@
 	include 'inc/userMenu.inc';
 ?>
 
-<div data-role="header"> 
-	<h1>viewProjects</h1> 
-</div> 
-
-
-<!--FORM-->
 <?php
 	require_once('inc/mongoConfigProjects.inc');
 	
 	$people = $collection->find();
 	$people_count = $people->count();
+?>
 	
-	echo $people_count . ' records found<br/>';
-	
+<div data-role="header"> 
+	<h1>viewProjects (<?php echo $people_count ?>)</h1> 
+</div> 
+
+
+<!--FORM-->
+<?php
 	if($people_count > 0){
 ?>
 
-<table border="1">
-  <thead>
-    <tr>
-      <th>PROJECT NAME</th>
-      <th>DEVELOPER NAME</th>
-      <th>STATUS</th>
-      <th>ACTIONS</th>
-    </tr>
-  </thead>
-  <tbody>
     <?php foreach($people as $v){ ?>
-    <tr>
-      <td><?php echo $v['projName']; ?></td>
-      <td><?php echo $v['devName']; ?></td>
-      <td><?php echo $v['status']; ?></td>
-      <td><a title="<?php echo $v['_id']; ?>" href="updateProject.php?projName=<?php echo $v['projName']; ?>">EDIT</a> | <a title="<?php echo $v['_id']; ?>" href="updateProject.php?projName=<?php echo $v['projName']; ?>">DELETE</a></td>
-    </tr>
+    
+    <div data-role="collapsible" data-theme="c" data-content-theme="d">
+	<h3><?php echo $v['projName']; ?></h3>
+        <p>ID: <?php echo $v['_id']; ?></p>
+        <p>NAME: <?php echo $v['projName']; ?></p>
+        <p>EMAIL: <?php echo $v['devName']; ?></p>
+        <p>NEWSLETTER: <?php echo $v['status']; ?></p>
+        <p>IP: <?php echo $v['ip']; ?></p>
+        <p>STATUS: <?php echo $v['status']; ?></p>
+        <div data-role="controlgroup" data-type="horizontal">
+			<a href="updateProject.php?projName=<?php echo $v['projName']; ?>" data-role="button" data-icon="plus">Edit</a>
+			<a href="updateProject.php?projName=<?php echo $v['projName']; ?>" data-role="button" data-icon="grid">Delete</a>
+		</div>
+	</div>
+
     <?php } ?>
-  </tbody>
-</table>
 <?php } ?>
 
 

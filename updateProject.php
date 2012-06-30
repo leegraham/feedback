@@ -35,19 +35,19 @@
 <form action="updateProject.php" method="post">
 	<p>
     	<label for="projName">PROJECT NAME:</label>
-    	<input type="text" name="projName" value="<?php echo $projName; ?>" readonly="readonly">
+    	<input type="text" name="projName" value="<?php echo $projName; ?>" readonly>
   	</p>
   	<p>
     	<label for="devjName">DEVELOPER NAME:</label>
-    	<input type="text" name="devName" value="<?php echo $devName; ?>">
+    	<input type="text" name="devName" value="<?php echo $devName; ?>" required>
   	</p>
   	<p>
     	<label for="status">STATUS:</label>
-    	<input type="text" name="status" value="<?php echo $status; ?>">
+    	<input type="number" name="status" value="<?php echo $status; ?>" required>
  	</p>
 	<p>
 	<p>
-		<input type="submit" value="Save" data-icon="check" data-theme="b">
+		<input type="submit" value="Save" data-icon="check" data-theme="b" onClick="PageRefresh">
 	</p>
 </form>
 <?php } ?>

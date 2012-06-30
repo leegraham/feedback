@@ -26,27 +26,27 @@
 <form action="createComment.php" method="post">
   <p>
     <label for="projName">PROJECT NAME:</label>
-    <input type="text" name="projName">
+    <input type="text" name="projName" required>
   </p>
   <p>
     <label for="devName">DEVELOPER NAME:</label>
-    <input type="text" name="devName">
+    <input type="text" name="devName" required placeholder="Andy Android">
   </p>
   <p>
     <label for="slideNum">SLIDE NUMBER:</label>
-    <input type="text" name="slideNum">
+    <input type="number" name="slideNum" required placeholder="77">
   </p>
   <p>
     <label for="revName">REVIEWER NAME:</label>
-    <input type="text" name="revName">
+    <input type="text" name="revName" required placeholder="Jon Johnson">
   </p>
   <p>
     <label for="revEmail">REVIEWER EMAIL:</label>
-    <input type="text" name="revEmail">
+    <input type="email" name="revEmail" required placeholder="jon@johnson.com">
   </p>
   <p>
     <label for="revComment">REVIEWER COMMENT:</label>
-    <textarea name="revComment" rows="4" cols="50"></textarea>
+    <textarea name="revComment" rows="4" cols="50" required placeholder="Insert your feedback here."></textarea>
   </p>
   <p>
     <input type="hidden" name="status" readonly value="1">
@@ -56,7 +56,7 @@
     <input type="text" name="timestamp" value="<?php $date = new DateTime();echo $date->format('Y-m-d H:i:s'); ?>" readonly size="25">
   </p>
   <p>
-    <input type="submit" value="Save" data-icon="check" data-theme="b">
+    <input type="submit" value="Save" data-icon="check" data-theme="b" onClick="PageRefresh">
   </p>
 </form>
 <?php

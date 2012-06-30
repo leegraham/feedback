@@ -16,10 +16,8 @@
 <?php
 	require_once('inc/mongoConfigUsers.inc');
 	
-	
 	$people = $collection->find();
 	$people_count = $people->count();
-	
 ?>
 
 <div data-role="header" data-theme="b"> 
@@ -37,8 +35,7 @@
     <div data-role="collapsible" data-theme="c" data-content-theme="d">
 	<h3><?php echo $v['name']; ?></h3>
         <p>ID: <?php echo $v['_id']; ?></p>
-        <p>NAME: <?php echo $v['name']; ?></p>
-        <p>EMAIL: <?php echo $v['email']; ?></p>
+        <p>NAME: <a href="mailto:<?php echo $v['email']; ?>"><?php echo $v['name']; ?></a></p>
         <p>NEWSLETTER: <?php echo $v['newsletter']; ?></p>
         <p>IP: <?php echo $v['ip']; ?></p>
         <p>STATUS: <?php echo $v['status']; ?></p>
