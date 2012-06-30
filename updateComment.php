@@ -1,7 +1,20 @@
+<!--HEAD-->
+<?php
+	include 'inc/header1.inc';
+?>
+<title>updateComment</title>
+<?php
+	include 'inc/header2.inc';
+?>
+
+
+<!--BODY/MENU-->
 <?php
 	include 'inc/userMenu.inc';
 ?>
 
+
+<!--FORM-->
 <h3>updateComment</h3>
 
 <?php
@@ -58,7 +71,7 @@
   </p>
   <p>
 	<p>
-		<input type="submit" value="Update">
+		<input type="submit" value="Save" data-icon="check" data-theme="b">
 	</p>
 </form>
 <?php } ?>
@@ -105,4 +118,10 @@ if(!empty($_POST)){
 		}
 		return $empty;
 	}	
+?>
+
+
+<!--FOOTER-->
+<?php
+	include 'inc/footer.inc';
 ?>

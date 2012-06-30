@@ -1,12 +1,26 @@
+<!--HEAD-->
+<?php
+	include 'inc/header1.inc';
+?>
+<title>viewProjects</title>
+<?php
+	include 'inc/header2.inc';
+?>
+
+
+<!--BODY/MENU-->
 <?php
 	include 'inc/userMenu.inc';
 ?>
 
-<h3>viewProjects</h3>
+<div data-role="header"> 
+	<h1>viewProjects</h1> 
+</div> 
 
+
+<!--FORM-->
 <?php
 	require_once('inc/mongoConfigProjects.inc');
-	
 	
 	$people = $collection->find();
 	$people_count = $people->count();
@@ -19,10 +33,8 @@
 <table border="1">
   <thead>
     <tr>
-      <th>NAME</th>
-      <th>EMAIL</th>
-      <th>NEWSLETTER</th>
-      <th>IP</th>
+      <th>PROJECT NAME</th>
+      <th>DEVELOPER NAME</th>
       <th>STATUS</th>
       <th>ACTIONS</th>
     </tr>
@@ -30,14 +42,18 @@
   <tbody>
     <?php foreach($people as $v){ ?>
     <tr>
-      <td><?php echo $v['name']; ?></td>
-      <td><?php echo $v['email']; ?></td>
-      <td><?php echo $v['newsletter']; ?></td>
-      <td><?php echo $v['ip']; ?></td>
+      <td><?php echo $v['projName']; ?></td>
+      <td><?php echo $v['devName']; ?></td>
       <td><?php echo $v['status']; ?></td>
-      <td><a title="<?php echo $v['_id']; ?>" href="updateUser.php?name=<?php echo $v['name']; ?>">EDIT</a> | <a title="<?php echo $v['_id']; ?>" href="updateUser.php?name=<?php echo $v['name']; ?>">DELETE</a></td>
+      <td><a title="<?php echo $v['_id']; ?>" href="updateProject.php?projName=<?php echo $v['projName']; ?>">EDIT</a> | <a title="<?php echo $v['_id']; ?>" href="updateProject.php?projName=<?php echo $v['projName']; ?>">DELETE</a></td>
     </tr>
     <?php } ?>
   </tbody>
 </table>
 <?php } ?>
+
+
+<!--FOOTER-->
+<?php
+	include 'inc/footer.inc';
+?>

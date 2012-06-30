@@ -1,9 +1,24 @@
+<!--HEAD-->
+<?php
+	include 'inc/header1.inc';
+?>
+<title>viewComments</title>
+<?php
+	include 'inc/header2.inc';
+?>
+
+
+<!--BODY/MENU-->
 <?php
 	include 'inc/userMenu.inc';
 ?>
 
-<h3>viewComments</h3>
+<div data-role="header"> 
+	<h1>viewComments</h1> 
+</div> 
 
+
+<!--FORM-->
 <?php
 	require_once('inc/mongoConfigComments.inc');
 	
@@ -47,3 +62,10 @@
   </tbody>
 </table>
 <?php } ?>
+
+
+
+<!--FOOTER-->
+<?php
+	include 'inc/footer.inc';
+?>

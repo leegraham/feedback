@@ -1,9 +1,24 @@
+<!--HEAD-->
+<?php
+	include 'inc/header1.inc';
+?>
+<title>createUser</title>
+<?php
+	include 'inc/header2.inc';
+?>
+
+
+<!--BODY/MENU-->
 <?php
 	include 'inc/userMenu.inc';
 ?>
 
-<h3>createUser</h3>
+<div data-role="header"> 
+	<h1>createUser</h1> 
+</div> 
 
+
+<!--FORM-->
 <?php
 	require_once('inc/mongoConfigUsers.inc');
 ?>
@@ -25,7 +40,7 @@
     <input type="hidden" name="newsletter" value="1">
   </p>
   <p>
-    <input type="hidden" name="ip" readonly="readonly" value="<?php
+    <input type="hidden" name="ip" readonly value="<?php
 		//GET USER IP ADDRESS - http://tutorialfeed.net/development/geo-targeting-with-php
 		function get_ip(){
 			if( !empty($_SERVER['HTTP_CLIENT_IP'])){
@@ -37,10 +52,10 @@
 		?>">
   </p>
   <p>
-    <input type="hidden" name="status" readonly="readonly" value="1">
+    <input type="hidden" name="status" readonly value="1">
   </p>
   <p>
-    <input type="submit" value="Save">
+    <input type="submit" value="Save" data-icon="check" data-theme="b">
   </p>
 </form>
 <?php
@@ -78,4 +93,10 @@
 		}
 		return $empty;
 	}	
+?>
+
+
+<!--FOOTER-->
+<?php
+	include 'inc/footer.inc';
 ?>

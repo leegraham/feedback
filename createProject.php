@@ -1,46 +1,42 @@
+<!--HEAD-->
+<?php
+	include 'inc/header1.inc';
+?>
+<title>createProject</title>
+<?php
+	include 'inc/header2.inc';
+?>
+
+
+<!--BODY/MENU-->
 <?php
 	include 'inc/userMenu.inc';
 ?>
 
-<h3>createProject</h3>
+<div data-role="header"> 
+	<h1>createProject</h1> 
+</div> 
 
+
+<!--FORM-->
 <?php
 	require_once('inc/mongoConfigProjects.inc');
 ?>
 
 <form action="createProject.php" method="post">
   <p>
-    <label for="name">NAME:</label>
-    <input type="text" name="name">
+    <label for="projName">PROJECT NAME:</label>
+    <input type="text" name="projName">
   </p>
   <p>
-    <label for="email">EMAIL:</label>
-    <input type="text" name="email">
+    <label for="devName">DEVELOPER NAME:</label>
+    <input type="text" name="devName">
   </p>
   <p>
-    <label for="password">PASSWORD:</label>
-    <input type="password" name="password">
+    <input type="hidden" name="status" readonly value="1">
   </p>
   <p>
-    <input type="hidden" name="newsletter" value="1">
-  </p>
-  <p>
-    <input type="hidden" name="ip" readonly="readonly" value="<?php
-		//GET USER IP ADDRESS - http://tutorialfeed.net/development/geo-targeting-with-php
-		function get_ip(){
-			if( !empty($_SERVER['HTTP_CLIENT_IP'])){
-				$ip = $_SERVER['HTTP_CLIENT_IP'];}
-					elseif(!empty( $_SERVER['HTTP_X_FORWARDED_FOR'])){
-				$ip = $_SERVER['HTTP_X_FORWARDED_FOR'];}
-					else{$ip = $_SERVER['REMOTE_ADDR'];}echo $ip;}
-				get_ip();
-		?>">
-  </p>
-  <p>
-    <input type="hidden" name="status" readonly="readonly" value="1">
-  </p>
-  <p>
-    <input type="submit" value="Save">
+    <input type="submit" value="Save" data-icon="check" data-theme="b">
   </p>
 </form>
 <?php
@@ -50,17 +46,14 @@
 		
 		$empty = check_empty($_POST);
 		if($empty != 1){
-			$name = $_POST['name'];
-			$email = $_POST['email'];
-			$password = $_POST['password'];
-			$newsletter = $_POST['newsletter'];
-			$ip = $_POST['ip'];
+			$projName = $_POST['projName'];
+			$devName = $_POST['devName'];
 			$status = $_POST['status'];
 			
-			$person = array('name'=>$name, 'email'=>$email, 'password'=>$password, 'newsletter'=>$newsletter, 'ip'=>$ip, 'status'=>$status);
+			$person = array('projName'=>$projName, 'devName'=>$devName, 'status'=>$status);
 			
 			$collection->insert($person);
-			echo '<hr/>' . $name . ' Added!' . '<br/><br/>What would like to do next? ' . '<a href="createProject.php">createProject</a> or <a href="viewProjects.php">viewProjects</a>';
+			echo '<hr/>' . $projName . ' Added!' . '<br/><br/>What would like to do next? ' . '<a href="createProject.php">createProject</a> or <a href="viewProjects.php">viewProjects</a>';
 		}else{
 			echo 'Please fill out all the fields!';
 		}
@@ -78,4 +71,10 @@
 		}
 		return $empty;
 	}	
+?>
+
+
+<!--FOOTER-->
+<?php
+	include 'inc/footer.inc';
 ?>

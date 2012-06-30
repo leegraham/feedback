@@ -1,7 +1,20 @@
+<!--HEAD-->
+<?php
+	include 'inc/header1.inc';
+?>
+<title>updateUser</title>
+<?php
+	include 'inc/header2.inc';
+?>
+
+
+<!--BODY/MENU-->
 <?php
 	include 'inc/userMenu.inc';
 ?>
 
+
+<!--FORM-->
 <h3>updateUser</h3>
 
 <?php
@@ -56,7 +69,7 @@
 		<input type="text" name="status" value="<?php echo $status; ?>">
 	</p>
 	<p>
-		<input type="submit" value="Update">
+		<input type="submit" value="Save" data-icon="check" data-theme="b">
 	</p>
 </form>
 <?php } ?>
@@ -99,4 +112,10 @@ if(!empty($_POST)){
 		}
 		return $empty;
 	}	
+?>
+
+
+<!--FOOTER-->
+<?php
+	include 'inc/footer.inc';
 ?>

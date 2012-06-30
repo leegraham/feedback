@@ -1,9 +1,24 @@
+<!--HEAD-->
+<?php
+	include 'inc/header1.inc';
+?>
+<title>createComment</title>
+<?php
+	include 'inc/header2.inc';
+?>
+
+
+<!--BODY/MENU-->
 <?php
 	include 'inc/userMenu.inc';
 ?>
 
-<h3>createComment</h3>
+<div data-role="header"> 
+	<h1>createComment</h1> 
+</div> 
 
+
+<!--FORM-->
 <?php
 	require_once('inc/mongoConfigComments.inc');
 ?>
@@ -34,14 +49,14 @@
     <textarea name="revComment" rows="4" cols="50"></textarea>
   </p>
   <p>
-    <input type="hidden" name="status" readonly="readonly" value="1">
+    <input type="hidden" name="status" readonly value="1">
   </p>
   <p>
     <label for="timestamp">TIMESTAMP:</label>
-    <input type="text" name="timestamp" value="<?php $date = new DateTime();echo $date->format('Y-m-d H:i:s'); ?>" readonly="readonly" size="25">
+    <input type="text" name="timestamp" value="<?php $date = new DateTime();echo $date->format('Y-m-d H:i:s'); ?>" readonly size="25">
   </p>
   <p>
-    <input type="submit" value="Save">
+    <input type="submit" value="Save" data-icon="check" data-theme="b">
   </p>
 </form>
 <?php
@@ -81,4 +96,10 @@
 		}
 		return $empty;
 	}	
+?>
+
+
+<!--FOOTER-->
+<?php
+	include 'inc/footer.inc';
 ?>

@@ -2,17 +2,22 @@ createUser - DONE
 viewUsers - DONE - NTH: QUERY BY _ID INSTEAD OF NAME
 updateUser - DONE
 
+createComment - DONE
+viewComments - DONE
+updateComment - DONE
 
-createComment - WIP
-viewComments - WIP
-updateComment - WIP
+createCourse - DONE
+viewCourses - DONE
+updateCourse - DONE
 
+UI
 
-createCourse - 
-viewCourses - 
-updateCourse - 	
+Convert Captivate/Flash module to PHP/MongoDB
 
-
+login.php w/ blowfish hashing - 
+register.php - 
+activate.php - 
+forgot.php - 
 
 
 
