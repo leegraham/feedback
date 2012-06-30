@@ -26,7 +26,7 @@
 <form action="createUser.php" method="post">
   <p>
     <label for="name">NAME:</label>
-    <input type="text" name="name" required placeholder="Lee Graham">
+    <input type="text" name="name" required placeholder="Lee Graham" autofocus>
   </p>
   <p>
     <label for="email">EMAIL:</label>

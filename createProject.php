@@ -26,7 +26,7 @@
 <form action="createProject.php" method="post">
   <p>
     <label for="projName">PROJECT NAME:</label>
-    <input type="text" name="projName" required>
+    <input type="text" name="projName" required autofocus>
   </p>
   <p>
     <label for="devName">DEVELOPER NAME:</label>

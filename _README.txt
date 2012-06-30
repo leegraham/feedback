@@ -57,7 +57,7 @@ http://git-scm.com/videos
 http://tutorialfeed.net/development/geo-targeting-with-php
 EBOOK: PayPal APIs Up and Running
 HTML5 Form Validation (email & required): http://stephenwalther.com/archive/2012/03/13/html5-form-validation.aspx & http://www.the-art-of-web.com/html/html5-form-validation/
-HTML5 Placeholders: http://diveintohtml5.info/forms.html
+HTML5 Placeholders, autofocus: http://diveintohtml5.info/forms.html
 
 
 
