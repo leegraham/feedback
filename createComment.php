@@ -23,41 +23,71 @@
 	require_once('inc/mongoConfigComments.inc');
 ?>
 
+
+
+
+
+
+
+<?php
+	require_once('inc/mongoConfigProjects.inc');
+	
+	$project = $collectionProj->find();
+	$project_count = $project->count();
+?>
+
+
+
+
+
+
+
+
+
+
+
+
 <form action="createComment.php" method="post">
-  <p>
-    <label for="projName">PROJECT NAME:</label>
-    <input type="text" name="projName" required autofocus>
-  </p>
-  <p>
-    <label for="devName">DEVELOPER NAME:</label>
-    <input type="text" name="devName" required placeholder="Andy Android">
-  </p>
-  <p>
-    <label for="slideNum">SLIDE NUMBER:</label>
-    <input type="number" name="slideNum" required placeholder="77">
-  </p>
-  <p>
-    <label for="revName">REVIEWER NAME:</label>
-    <input type="text" name="revName" required placeholder="Jon Johnson">
-  </p>
-  <p>
-    <label for="revEmail">REVIEWER EMAIL:</label>
-    <input type="email" name="revEmail" required placeholder="jon@johnson.com">
-  </p>
-  <p>
-    <label for="revComment">REVIEWER COMMENT:</label>
-    <textarea name="revComment" rows="4" cols="50" required placeholder="Insert your feedback here."></textarea>
-  </p>
-  <p>
-    <input type="hidden" name="status" readonly value="1">
-  </p>
-  <p>
-    <label for="timestamp">TIMESTAMP:</label>
-    <input type="text" name="timestamp" value="<?php $date = new DateTime();echo $date->format('Y-m-d H:i:s'); ?>" readonly size="25">
-  </p>
-  <p>
-    <input type="submit" value="Save" data-icon="check" data-theme="b" onClick="PageRefresh">
-  </p>
+	<?php
+        if($project_count > 0){
+            echo '<label for="projName" class="select">PROJECT:</label>';
+			echo '<select name="projName" data-theme="b" data-overlay-theme="a" data-native-menu="false">';
+    ?>
+        <?php foreach($project as $x){ ?>
+               <option value="<?php echo $x['projName']; ?>"><?php echo $x['projName']; ?></option>
+        <?php } ?>
+        <?php echo '</select>'; ?>
+    <?php } ?>
+    <p>
+        <label for="devName">DEVELOPER NAME:</label>
+        <input type="text" name="devName" required placeholder="Andy Android">
+    </p>
+    <p>
+        <label for="slideNum">SLIDE NUMBER:</label>
+        <input type="number" name="slideNum" required placeholder="77">
+    </p>
+    <p>
+        <label for="revName">REVIEWER NAME:</label>
+        <input type="text" name="revName" required placeholder="Jon Johnson">
+    </p>
+    <p>
+        <label for="revEmail">REVIEWER EMAIL:</label>
+        <input type="email" name="revEmail" required placeholder="jon@johnson.com">
+    </p>
+    <p>
+        <label for="revComment">REVIEWER COMMENT:</label>
+        <textarea name="revComment" rows="4" cols="50" required placeholder="Insert your feedback here."></textarea>
+    </p>
+    <p>
+    	<input type="hidden" name="status" readonly value="1">
+    </p>
+    <p>
+        <label for="timestamp">TIMESTAMP:</label>
+        <input type="text" name="timestamp" value="<?php $date = new DateTime();echo $date->format('Y-m-d H:i:s'); ?>" readonly size="25">
+    </p>
+    <p>
+    	<input type="submit" value="Save" data-icon="check" data-theme="b" onClick="PageRefresh">
+    </p>
 </form>
 <?php
 	if(!empty($_POST)){
@@ -78,7 +108,7 @@
 			$person = array('projName'=>$projName, 'devName'=>$devName, 'slideNum'=>$slideNum, 'revName'=>$revName, 'revEmail'=>$revEmail, 'revComment'=>$revComment, 'status'=>$status, 'timestamp'=>$timestamp);
 			
 			$collection->insert($person);
-			echo '<hr/>' . $projName . ' Added!' . '<br/><br/>What would like to do next? ' . '<a href="createComment.php">createComment</a> or <a href="viewComments.php">viewComments</a>';
+			echo '<hr/>' . $projName . ' Added!' . '<br/><br/>What would like to do next? ' . '<a href="createComment.php">createComment</a> or <a href="viewComments.php" onClick="PageRefresh">viewComments</a>';
 		}else{
 			echo 'Please fill out all the fields!';
 		}

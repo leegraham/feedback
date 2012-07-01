@@ -3,7 +3,7 @@
 	<script src="js/jquery.mobile-1.1.0.js"></script>
 	<script type="text/javascript">
 		$('#PageRefresh').click(function() {
-    	      location.reload();
+    	      location.reload(true);
 	});
 </script>
 </head>
