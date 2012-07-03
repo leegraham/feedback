@@ -1,8 +1,8 @@
 <?php
 	//CONNECT
-	$conn = new Mongo();
+	$connComm = new Mongo();
 	//DATABASE
-	$db = $conn->edustudios;
+	$dbComm = $connComm->edustudios;
 	//COLLECTION
-	$collection = $db->comments;
+	$collectionComm = $dbComm->comments;
 ?>

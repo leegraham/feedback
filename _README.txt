@@ -1,18 +1,22 @@
 createUser - DONE
 viewUsers - DONE
 updateUser - DONE
-
 createComment - DONE
 viewComments - DONE
 updateComment - DONE
-
 createCourse - DONE
 viewCourses - DONE
 updateCourse - DONE
-
 JQuery Mobile UI - DONE
-
 createComment.php - projName (drop down from project table) - DONE
+Added footer menu & Integrated glyphish icons
+
+
+
+
+
+
+
 
 
 
@@ -37,6 +41,19 @@ forgot.php -
 UPDATE QUERIES BY _ID INSTEAD OF NAME
 
 Custom JQuery Mobile Themeroller
+
+Investigate http://jquerymobile.com/download-builder/
+
+XML backup export
+
+JSON and XML API
+
+
+
+
+
+
+
 
 
 
@@ -66,7 +83,8 @@ HTML5 Form Validation (email & required): http://stephenwalther.com/archive/2012
 HTML5 Placeholders, autofocus: http://diveintohtml5.info/forms.html
 http://jquerymobile.com/themeroller/
 http://stackoverflow.com/questions/6137851/jquery-mobile-refresh-button
-
+http://oreilly.com/openbook/osfreesoft/book/index.html
+http://www.rosenlaw.com/oslbook.htm
 
 
 
@@ -80,4 +98,4 @@ TO DO (eduStudios):
  5. Google+ Page
  6. IRC
  7. CRM: Base or Salesforce or Campfire
- 8. Beanstalk
+ 8. Beanstalk?

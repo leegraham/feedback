@@ -16,7 +16,7 @@
 <?php
 	require_once('inc/mongoConfigComments.inc');
 	
-	$people = $collection->find();
+	$people = $collectionComm->find();
 	$people_count = $people->count();
 ?>
 

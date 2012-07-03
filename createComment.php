@@ -23,29 +23,12 @@
 	require_once('inc/mongoConfigComments.inc');
 ?>
 
-
-
-
-
-
-
 <?php
 	require_once('inc/mongoConfigProjects.inc');
 	
 	$project = $collectionProj->find();
 	$project_count = $project->count();
 ?>
-
-
-
-
-
-
-
-
-
-
-
 
 <form action="createComment.php" method="post">
 	<?php
@@ -91,7 +74,7 @@
 </form>
 <?php
 	if(!empty($_POST)){
-		$people = $collection->find();
+		$people = $collectionComm->find();
 		$people_count = $people->count();
 		
 		$empty = check_empty($_POST);
@@ -107,7 +90,7 @@
 			
 			$person = array('projName'=>$projName, 'devName'=>$devName, 'slideNum'=>$slideNum, 'revName'=>$revName, 'revEmail'=>$revEmail, 'revComment'=>$revComment, 'status'=>$status, 'timestamp'=>$timestamp);
 			
-			$collection->insert($person);
+			$collectionComm->insert($person);
 			echo '<hr/>' . $projName . ' Added!' . '<br/><br/>What would like to do next? ' . '<a href="createComment.php">createComment</a> or <a href="viewComments.php" onClick="PageRefresh">viewComments</a>';
 		}else{
 			echo 'Please fill out all the fields!';

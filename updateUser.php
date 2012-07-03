@@ -25,7 +25,7 @@
 		$query = array('name'=>$name
 	);
 	
-	$person = $collection->findOne($query);
+	$person = $collectionUser->findOne($query);
 	
 	$name = $person['name'];
 	$email = $person['email'];
@@ -86,7 +86,7 @@ if(!empty($_POST)){
 			
 			$query = array('name'=>$name);
 			
-			$person = $collection->findOne($query);
+			$person = $collectionUser->findOne($query);
 				
 			$person['password'] = $password;
 			$person['email'] = $email;
@@ -94,7 +94,7 @@ if(!empty($_POST)){
 			$person['ip'] = $ip;
 			$person['status'] = $status;
 			
-			$collection->save($person);
+			$collectionUser->save($person);
 				
 			echo 'User Update Successful!';
 		}

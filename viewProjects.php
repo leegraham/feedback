@@ -16,7 +16,7 @@
 <?php
 	require_once('inc/mongoConfigProjects.inc');
 	
-	$people = $collection->find();
+	$people = $collectionProj->find();
 	$people_count = $people->count();
 ?>
 	

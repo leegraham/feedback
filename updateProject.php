@@ -25,7 +25,7 @@
 		$query = array('projName'=>$projName
 	);
 	
-	$person = $collection->findOne($query);
+	$person = $collectionProj->findOne($query);
 	
 	$projName = $person['projName'];
 	$devName = $person['devName'];
@@ -61,12 +61,12 @@ if(!empty($_POST)){
 			
 			$query = array('projName'=>$projName);
 			
-			$person = $collection->findOne($query);
+			$person = $collectionProj->findOne($query);
 				
 			$person['devName'] = $devName;
 			$person['status'] = $status;
 			
-			$collection->save($person);
+			$collectionProj->save($person);
 				
 			echo 'Project Update Successful!';
 		}

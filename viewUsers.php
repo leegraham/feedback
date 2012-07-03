@@ -16,7 +16,7 @@
 <?php
 	require_once('inc/mongoConfigUsers.inc');
 	
-	$people = $collection->find();
+	$people = $collectionUser->find();
 	$people_count = $people->count();
 ?>
 

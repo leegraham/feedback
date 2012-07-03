@@ -60,7 +60,7 @@
 </form>
 <?php
 	if(!empty($_POST)){
-		$people = $collection->find();
+		$people = $collectionUser->find();
 		$people_count = $people->count();
 		
 		$empty = check_empty($_POST);
@@ -74,7 +74,7 @@
 			
 			$person = array('name'=>$name, 'email'=>$email, 'password'=>$password, 'newsletter'=>$newsletter, 'ip'=>$ip, 'status'=>$status);
 			
-			$collection->insert($person);
+			$collectionUser->insert($person);
 			echo '<hr/>' . $name . ' Added!' . '<br/><br/>What would like to do next? ' . '<a href="createUser.php">createUser</a> or <a href="viewUsers.php">viewUsers</a>';
 		}else{
 			echo 'Please fill out all the fields!';

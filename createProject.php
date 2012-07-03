@@ -41,7 +41,7 @@
 </form>
 <?php
 	if(!empty($_POST)){
-		$people = $collection->find();
+		$people = $collectionProj->find();
 		$people_count = $people->count();
 		
 		$empty = check_empty($_POST);
@@ -52,7 +52,7 @@
 			
 			$person = array('projName'=>$projName, 'devName'=>$devName, 'status'=>$status);
 			
-			$collection->insert($person);
+			$collectionProj->insert($person);
 			echo '<hr/>' . $projName . ' Added!' . '<br/><br/>What would like to do next? ' . '<a href="createProject.php">createProject</a> or <a href="viewProjects.php">viewProjects</a>';
 		}else{
 			echo 'Please fill out all the fields!';

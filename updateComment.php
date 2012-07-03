@@ -25,7 +25,7 @@
 		$query = array('projName'=>$projName
 	);
 	
-	$person = $collection->findOne($query);
+	$person = $collectionComm->findOne($query);
 	
 	$projName = $person['projName'];
 	$devName = $person['devName'];
@@ -90,7 +90,7 @@ if(!empty($_POST)){
 			
 			$query = array('projName'=>$projName);
 			
-			$person = $collection->findOne($query);
+			$person = $collectionComm->findOne($query);
 				
 			$person['devName'] = $devName;
 			$person['slideNum'] = $slideNum;
@@ -100,7 +100,7 @@ if(!empty($_POST)){
 			$person['status'] = $status;
 			$person['timestamp'] = $timestamp;
 			
-			$collection->save($person);
+			$collectionComm->save($person);
 				
 			echo 'Comment Update Successful!';
 		}
