@@ -13,8 +13,8 @@
 	include 'inc/userMenu.inc';
 ?>
 
-<div data-role="header"> 
-	<h1>createComment</h1> 
+<div data-role="header" data-theme="b"> 
+	<h1>Add Comment</h1> 
 </div> 
 
 

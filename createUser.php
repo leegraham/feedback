@@ -13,8 +13,8 @@
 	include 'inc/userMenu.inc';
 ?>
 
-<div data-role="header"> 
-	<h1>createUser</h1> 
+<div data-role="header" data-theme="b">
+	<h1>Add User</h1> 
 </div> 
 
 

@@ -20,8 +20,8 @@
 	$people_count = $people->count();
 ?>
 	
-<div data-role="header"> 
-	<h1>viewProjects (<?php echo $people_count ?>)</h1> 
+<div data-role="header" data-theme="b"> 
+	<h1>Projects (<?php echo $people_count ?>)</h1> 
 </div> 
 
 
@@ -41,8 +41,8 @@
         <p>IP: <?php echo $v['ip']; ?></p>
         <p>STATUS: <?php echo $v['status']; ?></p>
         <div data-role="controlgroup" data-type="horizontal">
-			<a href="updateProject.php?projName=<?php echo $v['projName']; ?>" data-role="button" data-icon="plus">Edit</a>
-			<a href="updateProject.php?projName=<?php echo $v['projName']; ?>" data-role="button" data-icon="grid">Delete</a>
+			<a href="updateProject.php?projName=<?php echo $v['projName']; ?>" data-role="button" data-icon="gear" data-theme="b">Edit</a>
+    		<a href="updateProject.php?projName=<?php echo $v['projName']; ?>" data-role="button" data-icon="delete" data-rel="dialog" data-transition="slidedown" data-theme="a">Delete</a>
 		</div>
 	</div>
 

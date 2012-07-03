@@ -24,6 +24,8 @@ Added footer menu & Integrated glyphish icons
 
 
 TO DO:
+Delete (status = i) dialog pages created: deleteProject.php, deleteComment.php, deleteUser.php
+
 Convert Captivate/Flash module to PHP/MongoDB
 
 status, newsletter - drop downs
