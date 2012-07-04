@@ -2,20 +2,25 @@
 <?php
 	include 'inc/header1.inc';
 ?>
-<title>updateProject</title>
+<title>deleteProject</title>
 <?php
 	include 'inc/header2.inc';
 ?>
 
 
 <!--BODY/MENU-->
-<?php
-	include 'inc/userMenu.inc';
-?>
+<div data-role="page" class="type-home">
+	<div data-role="header">
+    	<a href="viewProjects.php" data-icon="arrow-l" data-theme="b">View Projects</a>
+		<h1>Delete Project?</h1>
+	</div> 
+	
+	<div data-role="content">
+    	<div class="content-secondary">
 
 
 <!--FORM-->
-<h3>updateProject</h3>
+<h3>deleteComment</h3>
 
 <?php
 	require_once('inc/mongoConfigProjects.inc');
@@ -32,7 +37,7 @@
 	$status = $person['status'];
 	
 ?>
-<form action="updateProject.php" method="post">
+<form action="deleteProject.php" method="post">
 	<p>
     	<label for="projName">PROJECT NAME:</label>
     	<input type="text" name="projName" value="<?php echo $projName; ?>" readonly>
@@ -47,7 +52,7 @@
  	</p>
 	<p>
 	<p>
-		<input type="submit" value="Save" data-icon="check" data-theme="b" onClick="PageRefresh">
+		<input type="submit" value="Confirm Delete?" data-icon="delete" data-theme="b" onClick="PageRefresh">
 	</p>
 </form>
 <?php } ?>
@@ -57,18 +62,18 @@ if(!empty($_POST)){
 		if($empty != 1){
 			$projName = $_POST['projName'];
 			$devName = $_POST['devName'];
-			$status = $_POST['status'];
+			$status = '2';
 			
 			$query = array('projName'=>$projName);
 			
 			$person = $collectionProj->findOne($query);
 				
 			$person['devName'] = $devName;
-			$person['status'] = $status;
+			$person['status'] = '2';
 			
 			$collectionProj->save($person);
 				
-			echo 'Project Update Successful!';
+			echo 'Project Deleted!';
 		}
 	}
 ?>
@@ -88,6 +93,5 @@ if(!empty($_POST)){
 
 
 <!--FOOTER-->
-<?php
-	include 'inc/footer.inc';
-?>
+	</div>
+</div>

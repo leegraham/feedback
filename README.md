@@ -24,7 +24,7 @@ Added footer menu & Integrated glyphish icons
 
 
 TO DO:
-Delete (status = i) dialog pages created: deleteProject.php, deleteComment.php, deleteUser.php
+deleteProject.php not working as expected
 
 Convert Captivate/Flash module to PHP/MongoDB
 

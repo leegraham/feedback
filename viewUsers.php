@@ -41,7 +41,7 @@
         <p>STATUS: <?php echo $v['status']; ?></p>
         <div data-role="controlgroup" data-type="horizontal">
 			<a href="updateUser.php?name=<?php echo $v['name']; ?>" data-role="button"data-icon="gear" data-theme="b">Edit</a>
-    		<a href="updateUser.php?name=<?php echo $v['name']; ?>" data-role="button" data-icon="delete" data-rel="dialog" data-transition="slidedown" data-theme="a">Delete</a>
+    		<a href="deleteUser.php?name=<?php echo $v['name']; ?>" data-role="button" data-icon="delete" data-rel="dialog" data-transition="slidedown" data-theme="a">Delete</a>
 		</div>
 	</div>
 

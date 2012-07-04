@@ -45,7 +45,7 @@
         <p>TIMESTAMP: <?php echo $v['timestamp']; ?></p>
         <div data-role="controlgroup" data-type="horizontal">
 			<a href="updateComment.php?projName=<?php echo $v['projName']; ?>" data-role="button" data-icon="gear" data-theme="b">Edit</a>
-    		<a href="updateComment.php?projName=<?php echo $v['projName']; ?>" data-role="button" data-icon="delete" data-rel="dialog" data-transition="slidedown" data-theme="a">Delete</a>
+    		<a href="deleteComment.php?projName=<?php echo $v['projName']; ?>" data-role="button" data-icon="delete" data-rel="dialog" data-transition="slidedown" data-theme="a">Delete</a>
 		</div>
 	</div>
 
