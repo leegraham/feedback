@@ -24,7 +24,15 @@ Added footer menu & Integrated glyphish icons
 
 
 TO DO:
-deleteProject.php not working as expected
+deleteProject.php not working as expected	
+
+user role
+login.php w/ blowfish SHA256 hashing - status=0
+register.php - 
+activate.php - status=1
+forgot.php -
+
+CAPTCHA
 
 Convert Captivate/Flash module to PHP/MongoDB
 
@@ -34,11 +42,7 @@ password minimum - 8 characters, one upper case, one lower case, one number, one
 
 Sort & group views
 
-user role
-login.php w/ blowfish hashing - 
-register.php - 
-activate.php - 
-forgot.php - 
+ 
 
 UPDATE QUERIES BY _ID INSTEAD OF NAME
 
@@ -87,7 +91,10 @@ http://jquerymobile.com/themeroller/
 http://stackoverflow.com/questions/6137851/jquery-mobile-refresh-button
 http://oreilly.com/openbook/osfreesoft/book/index.html
 http://www.rosenlaw.com/oslbook.htm
-
+https://www.google.com/recaptcha/
+https://developers.google.com/recaptcha/docs/php
+http://php.net/manual/en/mongo.security.php
+http://www.idontplaydarts.com/2010/07/mongodb-is-vulnerable-to-sql-injection-in-php-at-least/
 
 
 
